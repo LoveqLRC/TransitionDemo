@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loveq.rc.transitiondemo.widget.ForegroundLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sample_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7f3c3c3c"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_double"
+    android:foreground="@drawable/light_ripple"
+    android:stateListAnimator="@animator/raise">
+
+    <ImageView
+        android:id="@+id/sample_icon"
+        style="@style/MaterialAnimations.Icon.Small"
+        android:src="@drawable/circle_24dp"
+        />
+
+    <TextView
+        android:id="@+id/sample_name"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="View animations sample"/>
+</loveq.rc.transitiondemo.widget.ForegroundLinearLayout>

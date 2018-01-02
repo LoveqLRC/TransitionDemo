@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="elevation_header">4dp</dimen>
+    <dimen name="spacing_double">16dp</dimen>
+    <dimen name="touch_raise">6dp</dimen>
+    <dimen name="spacing_normal">8dp</dimen>
+</resources>
