@@ -42,11 +42,11 @@ class TransitionActivity2 : BaseDetailActivity() {
     }
 
     private fun bindData() {
-        var sample = intent.extras.getSerializable(EXTRA_SAMPLE) as Sample
+        val sample = intent.extras.getSerializable(EXTRA_SAMPLE) as Sample
         type = intent.extras.getInt(EXTRA_TYPE)
-        var title = findViewById<TextView>(R.id.title)
+        val title = findViewById<TextView>(R.id.title)
         title.text = sample.name
-        var squareRed = findViewById<ImageView>(R.id.square_red)
+        val squareRed = findViewById<ImageView>(R.id.square_red)
         squareRed.setColorFilter(sample.color)
 
     }

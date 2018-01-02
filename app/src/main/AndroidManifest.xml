@@ -28,6 +28,8 @@
             android:name=".TransitionActivity3"
             android:theme="@style/MaterialAnimations.Red">
         </activity>
+        <activity android:name=".SharedElementActivity">
+        </activity>
     </application>
 
 </manifest>

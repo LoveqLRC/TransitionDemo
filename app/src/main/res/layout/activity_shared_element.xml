@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="loveq.rc.transitiondemo.TransitionActivity3">
+    tools:context="loveq.rc.transitiondemo.SharedElementActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -22,30 +22,17 @@
             style="@style/MaterialAnimations.TextAppearance.Title.Inverse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|start"/>
+            android:layout_gravity="center_vertical|start"
+            android:transitionName="@string/sample_blue_title"/>
 
     </android.support.v7.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/square_red"
-        style="@style/MaterialAnimations.Icon.Big"
-        android:src="@drawable/circle_24dp"/>
-
-    <TextView
-        android:id="@+id/activity_title"
-        style="@style/Base.TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Slide"/>
-
     <TextView
         style="@style/MaterialAnimations.Text.Body"
-        android:text="@string/medium_text"/>
+        android:text="Toolbar title is a shared element between MainActivity and this activity"/>
 
-    <Button
-        android:id="@+id/exit_button"
-        style="@style/MaterialAnimations.Button"
-        android:text="Exit"/>
-
-
+    <FrameLayout
+        android:id="@+id/sample2_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>

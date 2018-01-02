@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 
 
 /**
@@ -36,8 +35,14 @@ class SamplesRecyclerAdapter(private val activity: Activity, private val samples
                 0 -> {
                     transitionToActivity(TransitionActivity1::class.java, sample)
                 }
-                else -> {
-                    Toast.makeText(activity, "hello world  213", Toast.LENGTH_SHORT).show()
+                1 -> {
+                    transitionToActivity(TransitionActivity2::class.java, holder, sample)
+                }
+                2 -> {
+
+                }
+                3 -> {
+
                 }
             }
 
@@ -50,8 +55,15 @@ class SamplesRecyclerAdapter(private val activity: Activity, private val samples
     }
 
     private fun transitionToActivity(target: Class<*>, sample: Sample) {
-        var participants = createSafeTransitionParticipants(activity, true)
-        startActivity(target,participants,sample)
+        val participants = createSafeTransitionParticipants(activity, true)
+        startActivity(target, participants, sample)
+    }
+
+    private fun transitionToActivity(target: Class<*>, holder: SampleViewHolder, sample: Sample) {
+        val pairs = createSafeTransitionParticipants(activity, false,
+                Pair(holder.mSampleIcon, activity.getString(R.string.square_blue_name)),
+                Pair(holder.mSampleName, activity.getString(R.string.sample_blue_title)))
+        startActivity(target, pairs, sample)
     }
 
     private fun startActivity(target: Class<*>, pairs: Array<Pair<View, String>>, sample: Sample) {

@@ -11,12 +11,12 @@ import android.support.v7.widget.Toolbar
  */
 open class BaseDetailActivity : AppCompatActivity() {
     fun setupToolbar() {
-        var toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
         //是否显示返回按钮
-        actionBar.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         //是否显示标题
-        actionBar.setDisplayShowTitleEnabled(false)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -24,7 +24,7 @@ open class BaseDetailActivity : AppCompatActivity() {
         return true
     }
 
-    fun tansitionTo(intent: Intent) {
+    fun transitionTo(intent: Intent) {
         var participants = createSafeTransitionParticipants(this, true)
         var optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(this, *participants)
         startActivity(intent, optionsCompat.toBundle())
