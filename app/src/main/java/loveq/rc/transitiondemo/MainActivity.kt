@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.transition.Slide
 import android.view.Gravity
+import loveq.rc.transitiondemo.entity.Sample
 
 import java.util.*
 

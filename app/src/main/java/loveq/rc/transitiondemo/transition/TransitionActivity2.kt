@@ -1,4 +1,4 @@
-package loveq.rc.transitiondemo
+package loveq.rc.transitiondemo.transition
 
 import android.os.Bundle
 import android.transition.Explode
@@ -7,6 +7,9 @@ import android.transition.TransitionInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import loveq.rc.transitiondemo.BaseDetailActivity
+import loveq.rc.transitiondemo.R
+import loveq.rc.transitiondemo.entity.Sample
 
 class TransitionActivity2 : BaseDetailActivity() {
     private var type: Int? = null
@@ -48,6 +51,5 @@ class TransitionActivity2 : BaseDetailActivity() {
         title.text = sample.name
         val squareRed = findViewById<ImageView>(R.id.square_red)
         squareRed.setColorFilter(sample.color)
-
     }
 }

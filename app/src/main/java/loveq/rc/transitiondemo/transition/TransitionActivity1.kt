@@ -1,4 +1,4 @@
-package loveq.rc.transitiondemo
+package loveq.rc.transitiondemo.transition
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.transition.Slide
 import android.transition.Visibility
 import android.view.View
 import android.widget.TextView
+import loveq.rc.transitiondemo.BaseDetailActivity
+import loveq.rc.transitiondemo.R
+import loveq.rc.transitiondemo.entity.Sample
 
 class TransitionActivity1 : BaseDetailActivity() {
     private var sample: Sample? = null

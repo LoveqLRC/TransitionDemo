@@ -1,4 +1,4 @@
-package loveq.rc.transitiondemo
+package loveq.rc.transitiondemo.entity
 
 import android.support.annotation.ColorRes
 import android.support.v4.graphics.drawable.DrawableCompat

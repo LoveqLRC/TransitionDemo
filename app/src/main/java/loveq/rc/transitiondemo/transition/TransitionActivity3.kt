@@ -1,4 +1,4 @@
-package loveq.rc.transitiondemo
+package loveq.rc.transitiondemo.transition
 
 import android.os.Bundle
 import android.transition.Slide
@@ -8,6 +8,9 @@ import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import loveq.rc.transitiondemo.BaseDetailActivity
+import loveq.rc.transitiondemo.R
+import loveq.rc.transitiondemo.entity.Sample
 
 class TransitionActivity3 : BaseDetailActivity() {
     private var type: Int? = null
@@ -45,8 +48,8 @@ class TransitionActivity3 : BaseDetailActivity() {
     }
 
     private fun bindData() {
-        val sample = intent.extras.getSerializable(BaseDetailActivity.EXTRA_SAMPLE) as Sample
-        type = intent.extras.getInt(BaseDetailActivity.EXTRA_TYPE)
+        val sample = intent.extras.getSerializable(EXTRA_SAMPLE) as Sample
+        type = intent.extras.getInt(EXTRA_TYPE)
         val title = findViewById<TextView>(R.id.title)
         title.text = sample.name
         val squareRed = findViewById<ImageView>(R.id.square_red)

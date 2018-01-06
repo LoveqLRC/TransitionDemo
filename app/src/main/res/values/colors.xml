@@ -18,4 +18,13 @@
     <color name="material_animations_primary">#039BE5</color>
     <color name="ripple_light">#99ffffff</color>
     <color name="text_light">@android:color/white</color>
+
+
+    <color name="theme_blue_background">#84ffff</color>
+    <color name="theme_blue_primary">#4FC3F7</color>
+    <color name="theme_blue_accent">#ff193a</color>
+    <color name="theme_blue_text">@color/text_dark</color>
+    <color name="theme_blue_text_inverse">@android:color/black</color>
+    <color name="theme_blue_primary_dark">#039BE5</color>
+    <color name="text_dark">#616161</color>
 </resources>

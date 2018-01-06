@@ -10,6 +10,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import loveq.rc.transitiondemo.entity.Sample
+import loveq.rc.transitiondemo.sharedelement.SharedElementActivity
+import loveq.rc.transitiondemo.transition.TransitionActivity1
+import loveq.rc.transitiondemo.viewanimation.AnimationsActivity1
+
 
 
 /**
@@ -36,10 +41,10 @@ class SamplesRecyclerAdapter(private val activity: Activity, private val samples
                     transitionToActivity(TransitionActivity1::class.java, sample)
                 }
                 1 -> {
-                    transitionToActivity(TransitionActivity2::class.java, holder, sample)
+                    transitionToActivity(SharedElementActivity::class.java, holder, sample)
                 }
                 2 -> {
-
+                    transitionToActivity(AnimationsActivity1::class.java, sample)
                 }
                 3 -> {
 

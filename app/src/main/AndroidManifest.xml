@@ -17,18 +17,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TransitionActivity1"
+            android:name=".transition.TransitionActivity1"
             android:theme="@style/MaterialAnimations.Red">
         </activity>
         <activity
-            android:name=".TransitionActivity2"
+            android:name=".transition.TransitionActivity2"
             android:theme="@style/MaterialAnimations.Red">
         </activity>
         <activity
-            android:name=".TransitionActivity3"
+            android:name=".transition.TransitionActivity3"
             android:theme="@style/MaterialAnimations.Red">
         </activity>
-        <activity android:name=".SharedElementActivity">
+        <activity
+            android:name=".sharedelement.SharedElementActivity"
+            android:theme="@style/MaterialAnimations.Blue">
+        </activity>
+        <activity android:name=".viewanimation.AnimationsActivity1">
+        </activity>
+        <activity android:name=".viewanimation.AnimationsActivity2">
         </activity>
     </application>
 
