@@ -78,7 +78,21 @@ class AnimationsActivity2 : BaseDetailActivity() {
         val button4 = findViewById<View>(R.id.sample3_button4)
 
         button1.setOnClickListener {
-            TransitionManager.go(scene1,ChangeBounds())
+            TransitionManager.go(scene1, ChangeBounds())
+        }
+
+        button2.setOnClickListener {
+            TransitionManager.go(scene2, TransitionInflater.from(this)
+                    .inflateTransition(R.transition.slide_and_changebounds))
+        }
+
+        button3.setOnClickListener {
+            TransitionManager.go(scene3, TransitionInflater.from(this)
+                    .inflateTransition(R.transition.slide_and_changebounds_sequential))
+        }
+        button4.setOnClickListener {
+            TransitionManager.go(scene4,TransitionInflater.from(this)
+                    .inflateTransition(R.transition.slide_and_changebounds_sequential_with_interpolators))
         }
         viewsToAnimate.add(button1)
         viewsToAnimate.add(button2)

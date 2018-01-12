@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".viewanimation.AnimationsActivity2">
         </activity>
+        <activity android:name=".reveal.RevealActivity">
+        </activity>
     </application>
 
 </manifest>

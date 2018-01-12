@@ -21,7 +21,7 @@ class SharedElementFragment2 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val view = inflater!!.inflate(R.layout.fragment_shared_element_fragment2, container, false)
+        val view = inflater.inflate(R.layout.fragment_shared_element_fragment2, container, false)
         var sample = arguments?.getSerializable(EXTRA_SAMPLE) as Sample
         var squareBlue = view.findViewById<ImageView>(R.id.square_blue)
         DrawableCompat.setTint(squareBlue.drawable,sample.color)

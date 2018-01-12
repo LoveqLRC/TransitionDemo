@@ -11,10 +11,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import loveq.rc.transitiondemo.entity.Sample
+import loveq.rc.transitiondemo.reveal.RevealActivity
 import loveq.rc.transitiondemo.sharedelement.SharedElementActivity
 import loveq.rc.transitiondemo.transition.TransitionActivity1
 import loveq.rc.transitiondemo.viewanimation.AnimationsActivity1
-
 
 
 /**
@@ -47,7 +47,7 @@ class SamplesRecyclerAdapter(private val activity: Activity, private val samples
                     transitionToActivity(AnimationsActivity1::class.java, sample)
                 }
                 3 -> {
-
+                    transitionToActivity(RevealActivity::class.java, holder, sample, R.string.transition_reveal1)
                 }
             }
 
@@ -71,11 +71,18 @@ class SamplesRecyclerAdapter(private val activity: Activity, private val samples
         startActivity(target, pairs, sample)
     }
 
+    private fun transitionToActivity(target: Class<*>, holder: SampleViewHolder, sample: Sample, transitionName: Int) {
+        val pairs = createSafeTransitionParticipants(activity, false,
+                Pair(holder.mSampleIcon, activity.getString(transitionName)))
+        startActivity(target, pairs, sample)
+    }
+
     private fun startActivity(target: Class<*>, pairs: Array<Pair<View, String>>, sample: Sample) {
         val i = Intent(activity, target)
         val transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, *pairs)
         i.putExtra("sample", sample)
         activity.startActivity(i, transitionActivityOptions.toBundle())
     }
+
 
 }
